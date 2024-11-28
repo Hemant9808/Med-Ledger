@@ -1,4 +1,4 @@
-import { tryCatch } from "fp-ts/lib/Option";
+
 import { useState, useEffect } from "react";
 const Memos = ({ state }) => {
   const [memos, setMemos] = useState([]);

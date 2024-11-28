@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { ethers } from "ethers";
+import { ethers,parseEther } from "ethers";
 import loading from "../loading.svg";
 import banner from '../assets/Banner.jpg'
 
@@ -65,7 +65,7 @@ const HomePage = ({ account,state }) => {
       const name = document.querySelector("#name").value;
       const message = document.querySelector("#message").value;
       console.log(name, message, contract);
-      const amount = { value: ethers.utils.parseEther("0.000001") };
+      const amount = { value: parseEther("0.000001") };
       const transaction = await contract.buyChai(name, message, amount);
       console.log("transaction",transaction);
       setFormData((prev) => ({
