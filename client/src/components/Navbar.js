@@ -7,7 +7,7 @@ const Navbar = ({ account }) => {
 
   useEffect(() => {
     // Retrieve accountType from localStorage
-    const type = JSON.parse(localStorage.getItem('userData')).accountType;
+    const type = JSON.parse(localStorage.getItem('userData'))?.accountType || '';
     console.log("type",type);
     
     setAccountType(type);
@@ -25,7 +25,7 @@ const Navbar = ({ account }) => {
         {/* Logo */}
         <div className="text-2xl font-bold">
           <a href="#" className="hover:text-gray-300">
-            <span className="text-gray-100">🅲</span> COMPANY
+            <span className="text-gray-100">🅲</span> Med-Ledger
           </a>
         </div>
 
